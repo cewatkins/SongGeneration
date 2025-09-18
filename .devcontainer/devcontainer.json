@@ -1,0 +1,11 @@
+{
+  "name": "SongGeneration LeVo",
+  "image": "juhayna/song-generation-levo:hf0613",
+  "features": {
+    "ghcr.io/devcontainers/features/nvidia-cuda:1": {
+      "version": "12.0"
+    }
+  },
+  "runArgs": ["--gpus", "all"],
+  "postCreateCommand": "pip install -r requirements.txt && pip install -r requirements_nodeps.txt --no-deps"
+}
